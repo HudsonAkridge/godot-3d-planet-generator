@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://yo6lqoksa53k"]
+[gd_scene format=3 uid="uid://yo6lqoksa53k"]
 
 [ext_resource type="Shader" path="res://addons/naejimer_3d_planet_generator/shaders/clouds.gdshader" id="1_gtd8t"]
 [ext_resource type="Texture2D" uid="uid://b4nta4b1auodv" path="res://addons/naejimer_3d_planet_generator/noises/planet_terrestrial.tres" id="2_maa8i"]
@@ -8,11 +8,11 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c8avg"]
 render_priority = 0
 shader = ExtResource("1_gtd8t")
+shader_parameter/noise_texture = ExtResource("2_maa8i")
 shader_parameter/speed = 0.005
 shader_parameter/brightness = 0.5
 shader_parameter/threshold = 1.2
 shader_parameter/fluffiness = 0.1
-shader_parameter/noise_texture = ExtResource("2_maa8i")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d0a0i"]
 render_priority = 0
@@ -71,7 +71,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_37sus"]
 _data = {
-"Rotation": SubResource("Animation_2yx44")
+&"Rotation": SubResource("Animation_2yx44")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_udpb3"]
@@ -85,7 +85,7 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_udpb3")
 nodes/Animation/position = Vector2(-20, 140)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ji6rl")
 nodes/TimeScale/position = Vector2(140, 140)
-node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [node name="PlanetTerrestrial" type="MeshInstance3D"]
 transform = Transform3D(398.764, 0, 31.4246, 0, 400, 0, -31.4246, 0, 398.764, 0, 0, 0)

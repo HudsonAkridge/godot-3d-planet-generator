@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dbexddi1rwbt4"]
+[gd_scene format=3 uid="uid://dbexddi1rwbt4"]
 
 [ext_resource type="Shader" path="res://addons/naejimer_3d_planet_generator/shaders/body.gdshader" id="1_xf64t"]
 [ext_resource type="Texture2D" uid="uid://6maxob4srf50" path="res://addons/naejimer_3d_planet_generator/noises/planet_sand.tres" id="2_lpkdi"]
@@ -60,7 +60,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_37sus"]
 _data = {
-"Rotation": SubResource("Animation_2yx44")
+&"Rotation": SubResource("Animation_2yx44")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_udpb3"]
@@ -74,7 +74,7 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_udpb3")
 nodes/Animation/position = Vector2(-20, 140)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ji6rl")
 nodes/TimeScale/position = Vector2(140, 140)
-node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [node name="PlanetSand" type="MeshInstance3D"]
 transform = Transform3D(379.79, 0, 12.6299, 0, 380, 0, -12.6299, 0, 379.79, 0, 0, 0)

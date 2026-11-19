@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c1lxtdgeggnej"]
+[gd_scene format=3 uid="uid://c1lxtdgeggnej"]
 
 [ext_resource type="Shader" path="res://addons/naejimer_3d_planet_generator/shaders/body.gdshader" id="1_b0k00"]
 [ext_resource type="Texture2D" uid="uid://dxjapfacsp3fk" path="res://addons/naejimer_3d_planet_generator/noises/star.tres" id="2_8dsqn"]
@@ -60,7 +60,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7ups7"]
 _data = {
-"Rotation": SubResource("Animation_eqom4")
+&"Rotation": SubResource("Animation_eqom4")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_luras"]
@@ -74,7 +74,7 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_luras")
 nodes/Animation/position = Vector2(-20, 140)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_a3b21")
 nodes/TimeScale/position = Vector2(140, 140)
-node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [node name="Star" type="MeshInstance3D"]
 transform = Transform3D(-1021.6, 0, -629.555, 0, 1200, 0, 629.555, 0, -1021.6, 0, 0, 0)

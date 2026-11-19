@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://caui555xvmu3u"]
+[gd_scene format=3 uid="uid://caui555xvmu3u"]
 
 [ext_resource type="PackedScene" uid="uid://yo6lqoksa53k" path="res://addons/naejimer_3d_planet_generator/scenes/planet_terrestrial.tscn" id="2_j1hjd"]
 [ext_resource type="PackedScene" uid="uid://dneumird5vcjw" path="res://addons/naejimer_3d_planet_generator/scenes/planet_lava.tscn" id="3_3uru6"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://tnvbntvduo2b"]
+[gd_scene format=3 uid="uid://tnvbntvduo2b"]
 
 [ext_resource type="Shader" path="res://addons/naejimer_3d_planet_generator/shaders/body.gdshader" id="1_44m2i"]
 [ext_resource type="Texture2D" uid="uid://bq33q81jxrx46" path="res://addons/naejimer_3d_planet_generator/noises/planet_no_atmosphere.tres" id="2_36jis"]
@@ -45,7 +45,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jtf4x"]
 _data = {
-"Rotation": SubResource("Animation_rs8cm")
+&"Rotation": SubResource("Animation_rs8cm")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1a5k4"]
@@ -59,7 +59,7 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_1a5k4")
 nodes/Animation/position = Vector2(-20, 140)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_1k3hl")
 nodes/TimeScale/position = Vector2(140, 140)
-node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [node name="PlanetNoAtmosphere" type="MeshInstance3D"]
 transform = Transform3D(-44.609, 0, 194.962, 0, 200, 0, -194.962, 0, -44.609, 0, 0, 0)
